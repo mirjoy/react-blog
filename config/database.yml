@@ -1,0 +1,17 @@
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development_blog
+
+test:
+  <<: *default
+  database: db/test_blog
+
+production:
+  <<: *default
+  database: db/production_blog
