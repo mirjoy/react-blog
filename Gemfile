@@ -25,6 +25,7 @@ group :development, :test do
   gem 'pry'
   gem 'better_errors'
   gem 'rspec'
+  gem 'faker'
 end
 
 group :development do
