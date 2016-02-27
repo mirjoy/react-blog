@@ -1,0 +1,23 @@
+<%= form_for @recipe, url: {action: "create"} do |f| %>
+  <p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </p>
+  <p>
+  <%= f.label :directions %>
+  <%= f.text_field :directions %>
+  </p>
+  <p>
+  <%= f.label :baking_time %>
+  <%= f.text_field :baking_time %> minutes.
+  </p>
+  <p>
+  <%= f.label :baking_temperature %>
+  <%= f.text_field :baking_temperature %> degrees fahrenheit.
+  </p>
+  <p>
+  <%= f.label :servings %>
+  <%= f.text_field :servings %>
+  </p>
+  <%= f.submit "Create Recipe", class: "btn btn-success" %>
+<% end %>

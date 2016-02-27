@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resource :users
-  resource :blogposts
+  resources :users
+  resources :blogposts
+  resources :recipes
+  resources :ingredients
   # You can have the root of your site routed with "root"
   root 'blogposts#index'
 
