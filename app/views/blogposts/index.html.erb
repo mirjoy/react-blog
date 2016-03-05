@@ -1,1 +1,5 @@
-hi there
+<%= react_component 'AllBlogs' %>
+<% @blogs.each do |blog| %>
+  <h4><%= link_to blog.title, blogpost_path(blog) %></h4>
+  <p><%= blog.body %></p>
+<% end %>

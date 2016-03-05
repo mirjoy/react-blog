@@ -1,3 +1,6 @@
+User.destroy_all
+Blogpost.destroy_all
+puts "destroyed previous data"
 
 def create_users
   User.create(first_name: "Miriam",
