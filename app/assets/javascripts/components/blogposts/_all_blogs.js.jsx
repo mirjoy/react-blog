@@ -8,20 +8,18 @@ var AllBlogs = React.createClass({
   },
 
   render() {
-    if (this.state.blogs[0]){
-      this.state.blogs.map(function(blog){
-        return (
-          <div>
-            Title: {blog.title}
-          </div>
-        )
-      });
-    }
-    else {
+    var blogs = this.state.blogs.map((blog) => {
       return (
-        <div>Title</div>
+        <div>
+          <Blog blog={blog} />
+        </div>
       )
-    }
-    }
+    });
+    return (
+      <div>
+        {blogs}
+      </div>
+    )
+  }
 
 });
